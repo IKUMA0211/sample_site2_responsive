@@ -1,0 +1,246 @@
+@media screen and (min-width: 786px){
+    nav{
+        clear: both;
+        overflow: hidden;
+    }
+    nav ul{
+        letter-spacing: -.4em;
+    }
+    
+    nav ul li{
+        float: left;
+        width: 16.66%;
+        height: 66px;
+        text-align: center;
+        border: #CCC 1px solid;
+        box-sizing: border-box;
+        font-weight: bold;
+        display: block;
+        letter-spacing: normal;
+        
+    }
+    
+    nav ul li .v_line_fix{
+        background-color: #0F3BDB;
+        width: 3px;
+        height: 40px;
+        float: left;
+        margin-top: 12px;
+        margin-left: 5px;
+        margin-right: -8px;
+        display: none;
+    }
+    nav ul li a{
+        text-decoration: none;
+        display: block;
+        height: 50px;
+        padding-top: 16px;
+        line-height: 1;
+        color: #666;
+    }
+    nav ul li a span{
+        font-weight: normal;
+        font-size: 10px;
+        color: #bababa;
+        opacity: .7;
+    }
+    nav ul li:hover{
+        background-color: #E6EBFA;
+        transition: .5s;
+    }
+    nav ul li:hover .v_line_fix{
+        display: block;
+    }
+    nav ul li a:hover{
+        color: #0F3BDB;
+    }
+    .active{
+        background-color: #E6EBFA;
+    }
+    .active .v_line_fix{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width:780px){
+    
+    
+
+    #nav-drawer {
+        display: block;
+        float: right;
+        border: black 1px solid;
+        height: 50px;
+        width: 50px;
+        margin-top: 25px;
+        margin-right: 25px;
+    }
+      
+      /*アイコンのスペース*/
+    #nav-open {
+        display: inline-block;
+        width: 40px;
+        height: 38px;
+        vertical-align: middle;
+        padding-left: 10px;
+        padding-top: 12px;
+        position: relative;
+        
+    }
+    #nav-open #batu::before, #nav-open #batu::after {
+        display: none;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        height: 5%;
+        margin: -5% 0 0 -37%;
+        background: black;
+    }  
+    #nav-open #batu::before{
+        transform: rotate(-45deg); 
+    }
+    #nav-open #batu::after{
+        transform: rotate(45deg);
+    }
+      /*ハンバーガーアイコンをCSSだけで表現*/
+    #nav-open #line, #nav-open #line:before, #nav-open #line:after {
+        position: absolute;
+        height: 4px;/*線の太さ*/
+        width: 30px;/*長さ*/
+        background: black;
+        display: block;
+        content: "";
+    }
+    #nav-open #line:before {
+        bottom: -10px;
+    }
+    #nav-open #line:after {
+        bottom: -20px;
+    } 
+    
+    body{
+        position: relative;
+    }
+
+      /*中身*/
+    #nav-content {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 9999;/*最前面に*/ 
+        width: 100%;/*最大幅（調整してください）*/
+        height: 570px;
+        background-color: rgb(0,0,0,.8);/*背景色*/ 
+        display: none;
+        transition: .4s; 
+    }
+      
+      
+    #nav-input:checked ~ #nav-content {
+        display: block;
+    }
+    #nav-input:checked ~ #nav-open #line{
+        display: none;
+    }
+    #nav-input:checked ~ #nav-open #batu::before, 
+    #nav-input:checked ~ #nav-open #batu::after {
+        display: block;
+    }
+    
+
+    nav ul li{
+        box-sizing: border-box;
+        float: none;
+        width: 100%;
+        height: 95px;
+        border-bottom: white 1px solid;
+        display: block;
+    }
+    nav ul li a{
+        text-decoration: none;
+        display: block;
+        height: 50px;
+        padding: 20px 0 0 20px;
+        color: white;
+        font-size: 20px;
+        line-height: 1.5;
+        height: 95px;
+    }
+    nav ul li a span{
+        font-size: 10px;
+        color: white;
+        font-size: 12px;
+    }
+
+    main{
+        float: none;
+        width: 100%;
+        padding-top: 5px;
+        
+    }
+    .maincontainer{
+        padding: 2%;
+    }
+
+    h1 .logo{
+        width: 60%;
+    }
+
+    h2,h3{
+        font-size: 16px;
+        padding: 7px 6px 7px 8px;
+        height: auto;
+        line-height: 1.5;
+    }
+    .h2-text{
+        padding-top: 3px;
+    }
+    main .v_line_fix{
+        margin: 4px;
+        height: 20px;
+    }
+
+    main ul li .new{
+        font-size: 8px;
+
+    }
+
+    td{
+        font-size: 12px;
+        padding-left: 3px;
+    }
+
+    .date{
+        font-size: 10px;
+    }
+    .sentence{
+        font-size: 10px;
+        line-height: 2;
+    }
+
+
+    aside{
+        float: none;
+        width: 100%;
+        padding: 2%;
+    }
+    aside section{
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    aside li{
+        overflow: hidden;
+    }
+    aside li img{
+        width: 20%;
+        height: auto;
+        float: left;
+        margin-right: 5px;
+    }
+    .space{
+        height: 0;
+    }
+}
